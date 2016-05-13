@@ -1,0 +1,157 @@
+th {
+  color:red;
+  border: solid 5px skyblue;
+  padding:15px;
+  text-align: center;
+}
+
+td {
+  border: solid 5px skyblue;
+  text-align: center;
+  color:white;
+  padding:5px;
+}
+
+table {
+  width:70%;
+  margin:auto;
+  border-collapse: collapse;;
+}
+
+.col-md-6 {
+  padding-left: 190px;
+}
+
+.jumbotron.banner{
+
+  background-image: url(http://content.sportslogos.net/news/2016/02/kings-alternate-court-4.png);
+  background-size: cover;
+  background-position: center;
+  width: 1200px;
+  height: 620px;
+  margin-bottom: 30px;
+}
+
+
+body, html {
+  background-color:#502d7f;
+  overflow-x:hidden;
+  padding-top:50px;
+}
+
+button {
+  margin: 100px auto;
+  display: block;
+}
+
+h1 {
+  text-align:center;
+  color:red;
+
+}
+#footerLogo{
+  position: absolute;
+  left: 0;
+}
+
+.jumbotron {
+  border: 2px solid skyblue;
+  background-image: url(http://content.sportslogos.net/news/2016/02/Kings-alternate-court-f1.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 700px;
+  margin: auto;
+  color:purple;
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: -175px;
+  background-color: black;
+  width:100%;
+  height: 130px;
+  border-top: 5px solid skyblue;
+}
+
+#footerCopy{
+  text-align: center;
+  position: relative;
+  padding-top: 95px;
+  color:white;
+}
+
+my-awesome-footer{
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+  font-size: 15px;
+  color:white;
+  padding-top: -250px;
+  float: left;
+  padding-left: 150px;
+}
+
+.fa-twitter {
+  color:white;
+}
+
+a {
+  color: #502d7f;
+}
+
+
+
+
+.playerRow.ng-enter {
+  transition:0.2s linear all;
+  opacity:0;
+  transform: translateX(-100%);
+}
+
+.playerRow.ng-enter.ng-enter-active {
+  opacity:1;
+  transform: translateX(0);
+
+}
+
+
+.playerRow.ng-leave {
+  transition:0.2s linear all;
+  opacity:1;
+  transform: translateX(0);
+
+}
+.playerRow.ng-leave.ng-leave-active {
+  opacity:0;
+  transform: translateX(-100%);
+
+}
+/*newww*/
+main.ng-enter {
+  transition:0.2s linear all;
+  opacity:0;
+  transform: translateX(-100%);
+}
+
+main.ng-enter.ng-enter-active {
+  opacity:1;
+  transform: translateX(0);
+
+}
+
+
+main.ng-leave {
+  transition:0.2s linear all;
+  opacity:1;
+  transform: translateX(0);
+
+}
+main.ng-leave.ng-leave-active {
+  opacity:0;
+  transform: translateX(-100%);
+
+}

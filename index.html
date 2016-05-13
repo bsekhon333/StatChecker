@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="angular.min.js"></script>
+  <!-- <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script> -->
+  <!-- <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css"> -->
+
+  <script src="angular-animate.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css"> -->
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <script src="directives/footer.directive.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <div ng-controller="myCtrl">
+    <div class="col-md-12">
+      <div class="jumbotron" ng-hide="!showStuff">
+        <h1>2015-2016 Sacramento Kings Stats</h1>
+        <button ng-click="showStuff=false">click here</button>
+      </div>
+    </div>
+    <main ng-hide="showStuff">
+      <div class="jumbotron banner"></div>
+      <div class="col-md-6">
+        <input type="text" ng-model="player" placeholder="Search for Player">
+        <br>
+        <br>
+        <select ng-model="order" ng-animate="'animate'">
+          <option value="last">Name</option>
+          <option value="-points">Points</option>
+          <option value="turnovers">Turnovers</option>
+          <option value="-blocks">Blocks</option>
+          <option value="-steals">Steals</option>
+          <option value="-assists">Assists</option>
+          <option value="-rebounds">Rebounds</option>
+          <option value="-field">FG Percentage</option>
+        </select>
+        <br>
+        <br>
+      </div>
+    <table >
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Points</th>
+          <th>Turnovers</th>
+          <th>Blocks</th>
+          <th>Steals</th>
+          <th>Assists</th>
+          <th>Rebounds</th>
+          <th>FG%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-animate="'animate'" ng-repeat="player in players | orderBy: order | filter:player" class="playerRow">
+          <td>{{player.last}}, {{player.first}}</td>
+          <td>{{player.points}}</td>
+          <td>{{player.turnovers}}</td>
+          <td>{{player.blocks}}</td>
+          <td>{{player.steals}}</td>
+          <td>{{player.assists}}</td>
+          <td>{{player.rebounds}}</td>
+          <td>{{player.field}}</td>
+        </tr>
+      </tbody>
+     </table>
+    <my-awesome-footer></my-awesome-footer>
+   </main>
+  </div>
+
+
+
+
+
+
+</body>
+</html>
